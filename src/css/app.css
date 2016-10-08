@@ -1,0 +1,42 @@
+/* Your CSS goes here */
+#main {
+  text-align: center;
+}
+
+html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+#close {
+  position: absolute;
+  top: 90px;
+  right: 0;
+  width: 64px;
+  height: 64px;
+  overflow: hidden;
+  z-index: 1000;
+}
+#close img {
+  width: 100%;
+}
+
+#speed {
+  font-size: 8em;
+  line-height: .8em;
+}
+
+#map
+{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+#circle
+{
+  position: relative;
+  top: 100px;
+  left: 20px;
+}

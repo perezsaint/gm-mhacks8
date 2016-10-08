@@ -1,0 +1,12 @@
+{
+  "name":"Demo",
+  "id":"12345678",
+  "version": "0.1.0",
+  "src": "src",
+  "dist": "dist",
+  "main": "index.html",
+  "icon": "Icon.png",
+  "developer": "Michael Perez",
+  "category":"General",
+  "type":"RemoteLow"
+}

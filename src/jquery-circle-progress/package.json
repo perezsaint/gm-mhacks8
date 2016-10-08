@@ -1,0 +1,69 @@
+{
+  "name": "jquery-circle-progress",
+  "version": "1.2.0",
+  "author": {
+    "name": "Rostyslav Bryzgunov",
+    "email": "kottenator@gmail.com"
+  },
+  "description": "Plugin to draw animated circular progress bars",
+  "license": "MIT",
+  "main": "dist/circle-progress.js",
+  "keywords": [
+    "jquery",
+    "canvas",
+    "progress-bar"
+  ],
+  "dependencies": {
+    "jquery": "*"
+  },
+  "devDependencies": {
+    "karma": "~1.2",
+    "qunitjs": "~2.0",
+    "karma-qunit": "~1.2",
+    "karma-firefox-launcher": "~1.0",
+    "karma-phantomjs-launcher": "~1.0",
+    "karma-sauce-launcher": "~1.0",
+    "uglify-js": "~2.7",
+    "jsdoc": "~3.4"
+  },
+  "scripts": {
+    "test": "karma start",
+    "build-min": "uglifyjs dist/circle-progress.js -cmo dist/circle-progress.min.js --comments",
+    "build-docs": "jsdoc dist/circle-progress.js -c jsdoc.conf"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kottenator/jquery-circle-progress.git"
+  },
+  "gitHead": "8f20fced97986318d199d890148a9290e0d84e62",
+  "bugs": {
+    "url": "https://github.com/kottenator/jquery-circle-progress/issues"
+  },
+  "homepage": "https://github.com/kottenator/jquery-circle-progress#readme",
+  "_id": "jquery-circle-progress@1.2.0",
+  "_shasum": "516bfc77af6db072557b5fe29b090936e6055ce2",
+  "_from": "jquery-circle-progress@latest",
+  "_npmVersion": "3.10.3",
+  "_nodeVersion": "6.3.0",
+  "_npmUser": {
+    "name": "kottenator",
+    "email": "kottenator@gmail.com"
+  },
+  "dist": {
+    "shasum": "516bfc77af6db072557b5fe29b090936e6055ce2",
+    "tarball": "https://registry.npmjs.org/jquery-circle-progress/-/jquery-circle-progress-1.2.0.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "kottenator",
+      "email": "kottenator@gmail.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/jquery-circle-progress-1.2.0.tgz_1472677795424_0.6177774786483496"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/jquery-circle-progress/-/jquery-circle-progress-1.2.0.tgz",
+  "readme": "ERROR: No README data found!"
+}
