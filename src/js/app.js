@@ -1,16 +1,34 @@
-gm.info.getCurrentPosition(processPosition, true);
-gm.info.watchVehicleData(showSpeed, ['average_speed']);
+gm.info.watchPosition(processPosition, true);
+gm.info.watchVehicleData(processSpeed, ['average_speed']);
 
 var map;
-var circle;
+var circle = $('#circle').circleProgress({
+    startAngle: -Math.PI/2,
+    value: 0.75,
+    animation: false,
+    size: 120,
+    thickness: 20,
+    fill: {
+        gradient: ["#93817c","#e98d58"]
+    }
+});
 
-function showSpeed(data) {
+
+function processSpeed(data) {
 var speed = data;//.average_speed;
 
   if (speed !== undefined) {
       updateCircle(speed);
   }
-};
+}
+
+function processPosition(position){
+  var lat = position.coords.latitude;
+  var lng = position.coords.longitude;
+
+  map.setPosition(new google.maps.LatLng(lat,lng));
+  map.setCenter(new google.maps.LatLng(lat,lng));
+}
 
 function updateCircle(speed)
 {
@@ -21,7 +39,7 @@ function updateCircle(speed)
   if(percent > 1)
   {
     //passed the speed limit
-    //We should trigger the warning 
+    //We should trigger the warning
     percent = 1; // because circleProgress only takes values from 0 to 1
   }
 
@@ -253,22 +271,3 @@ function initMap() {
 ]
         });
 }
-
-function processPosition(position){
-  var lat = position.coords.latitude;
-  var lng = position.coords.longitude;
-
-  console.info(lat);
-  console.info(lng);
-}
-
-circle = $('#circle').circleProgress({
-    startAngle: -Math.PI/2,
-    value: 0.75,
-    animation: false,
-    size: 120,
-    thickness: 20,
-    fill: {
-        gradient: ["#93817c","#e98d58"]
-    }
-});
