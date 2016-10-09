@@ -4,10 +4,19 @@
 }
 
 html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#cover {
+  background: url("../images/spinner.gif") no-repeat scroll center center #344557;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
 
 #close {
   position: absolute;
@@ -16,7 +25,6 @@ html, body {
   width: 64px;
   height: 64px;
   overflow: hidden;
-  z-index: 1000;
 }
 #close img {
   width: 100%;
@@ -27,15 +35,13 @@ html, body {
   line-height: .8em;
 }
 
-#map
-{
+#map {
   height: 100%;
   width: 100%;
   position: absolute;
 }
 
-#circle
-{
+#circle {
   position: relative;
   top: 100px;
   left: 20px;
